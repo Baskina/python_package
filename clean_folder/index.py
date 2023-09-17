@@ -127,7 +127,7 @@ def get_all_files(path, unopened_dir_list_prev_levels=None, all_files=None):
     if len(unopened_dir_list_prev_levels) != 0 and os.getcwd().split('/')[-1] == unopened_dir_list_prev_levels[-1]:
 
         unopened_dir_list_prev_levels.pop(-1)
-        return get_all_files(fr'../..', unopened_dir_list_prev_levels, all_files)
+        return get_all_files(fr'..', unopened_dir_list_prev_levels, all_files)
     else:
         return get_all_files(fr'{os.getcwd()}/{unopened_dir_list_prev_levels[-1]}', unopened_dir_list_prev_levels,
                              all_files)
